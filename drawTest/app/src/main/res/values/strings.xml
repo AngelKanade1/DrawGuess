@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">drawTest</string>
+    <string-array name="colors_array">
+        <item>黑色</item>
+        <item>红色</item>
+        <item>绿色</item>
+        <item>蓝色</item>
+        <item>黄色</item>
+        <item>紫色</item>
+        <item>青色</item>
+    </string-array>
+</resources>
