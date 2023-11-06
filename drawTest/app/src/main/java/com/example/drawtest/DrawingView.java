@@ -22,6 +22,10 @@ public class DrawingView extends View {
     private float startX, startY, endX, endY;
     private boolean isBigErase;
 
+    public Bitmap getCanvasBitmap(){
+        return canvasBitmap;
+    }
+
     public DrawingView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         clearPaint = new Paint();
