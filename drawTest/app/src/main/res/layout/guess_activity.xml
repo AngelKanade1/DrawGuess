@@ -23,7 +23,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/buttonLogin"
+        android:layout_below="@id/buttonSend"
         app:srcCompat="@android:drawable/edit_text" />
 
 </RelativeLayout>

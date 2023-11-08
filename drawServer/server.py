@@ -72,10 +72,11 @@ def guess():
 
 @app.route('/getquestion', methods=['POST'])
 def getQuestion():
-    global players, gameRound, words
+    global players, playersInfo, gameRound, words
     id = request.values.get("id")
     if gameRound == 1:
         word = random.choice(words)
+        playersInfo[id]["question"] = word
         words.remove(word)
         return word
     if players.index(id) == 0:
@@ -112,6 +113,13 @@ def start():
     unfinishPlayers = players
     words = []
     emit('message', {'data': 'gamestart'})
+
+
+@app.route('/getinfo', methods=['POST'])
+def start():
+    global playersInfo
+    playersInfo["index"] = ",".join(str(x) for x in players)
+    return str(playersInfo)
 
 
 @app.route('/checktimes', methods=['POST'])

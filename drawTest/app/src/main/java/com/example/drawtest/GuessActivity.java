@@ -37,7 +37,7 @@ public class GuessActivity extends AppCompatActivity {
     }
 
     private void jumpToEnd(){
-        Intent intent = new Intent(this, GuessActivity.class);
+        Intent intent = new Intent(this, EndActivity.class);
         intent.putExtra("id", id);
         intent.putExtra("isStart", isStart);
         startActivity(intent);

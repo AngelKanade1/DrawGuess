@@ -37,6 +37,7 @@ public class MyWebSocketClient extends AppCompatActivity {
                     case "startguess":sendBroadcastMessage("com.example.ACTION_SOCKET_MAIN", "startguess");break;
                     case "startdraw":sendBroadcastMessage("com.example.ACTION_SOCKET_START_DRAW", "startdraw");break;
                     case "endgame":sendBroadcastMessage("com.example.ACTION_SOCKET_START_DRAW", "endgame");break;
+                    case "endcheck":sendBroadcastMessage("com.example.ACTION_SOCKET_END_CHECK","endcheck");break;
                 }
             }
         });
