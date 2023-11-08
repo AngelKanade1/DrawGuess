@@ -85,7 +85,7 @@ def getQuestion():
 
 
 @app.route('/getbitmap', methods=['POST'])
-def getQuestion():
+def getbitmap():
     global players, gameRound, playersInfo
     id = request.values.get("id")
     if players.index(id) == 0:
@@ -105,8 +105,9 @@ def rest():
     return ','.join(str(x) for x in unfinishPlayers)
 
 
-@app.route('/start', methods=['POST'])
+@app.route('/start')
 def start():
+    print(1)
     global isStart, unfinishPlayers, words, gameRound
     isStart = True
     gameRound += 1
@@ -116,14 +117,14 @@ def start():
 
 
 @app.route('/getinfo', methods=['POST'])
-def start():
+def getinfo():
     global playersInfo
     playersInfo["index"] = ",".join(str(x) for x in players)
     return str(playersInfo)
 
 
 @app.route('/checktimes', methods=['POST'])
-def start():
+def checktimes():
     global unfinishPlayers, players
     id = request.values.get("id")
     unfinishPlayers.remove(id)
@@ -132,8 +133,9 @@ def start():
         unfinishPlayers = players
 
 
-@app.route('/again', methods=['POST'])
-def start():
+@app.route('/again')
+def again():
+    print(2)
     global unfinishPlayers, players, gameRound, playersInfo, isStart, words
     unfinishPlayers = []
     players = []
